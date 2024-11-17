@@ -1,0 +1,193 @@
+/* বডি স্টাইল */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: yellowgreen;
+}
+
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* গ্রেডিয়েন্ট রঙ */
+    color: #ffffff; /* টেক্সটের রঙ */
+}
+
+
+/* হেডার সেকশন */
+header {
+    background-color: #a7af35;
+    color: rgb(250, 71, 0);
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* নেভিগেশন বার */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #444;
+}
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: rgb(148, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 5px;
+    background: yellowgreen;
+}
+
+/* সেকশন স্টাইল */
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+}
+
+/* কনটেইনার সেকশন */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* গ্রিড লেআউট */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.grid-item {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+#testimonials {
+    background-color: #f0f8ff; /* হালকা নীল রঙ */
+    padding: 50px 0;
+}
+#testimonials blockquote {
+    font-style: italic;
+    color: #ff0000;
+}
+#testimonials .card {
+    border: none;
+    background-color: #33ff00;
+    background-color: #1bb41b; /* প্রতিটি কার্ডের ভিতরে সাদা রঙ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* কার্ডে হালকা শ্যাডো */
+}
+#testimonials .blockquote-footer {
+    color: #bedb19;
+    font-size: 0.9rem;
+}
+
+/* Testimonials Section Background */
+/* ফর্ম স্টাইল */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* পাদটীকা (Footer) সেকশন */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* বেসিক এনিমেশন স্টাইল */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* সেকশনগুলির জন্য এনিমেশন */
+#about, #services, #projects, #testimonials, #contact {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#about {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+#projects .card {
+    animation: zoomIn 1s ease-in-out;
+    animation-delay: 0.3s; /* কার্ডের জন্য দেরি করে প্রদর্শন */
+}
+
+/* গ্রাহক মতামত (Testimonials) */
+#testimonials .card {
+    animation: slideInRight 1s ease-in-out;
+    animation-delay: 0.3s; /* প্রতিটি কার্ডের জন্য সময় */
+}
+
